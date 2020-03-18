@@ -1,11 +1,13 @@
-Feature: login feature
+Feature: Login Feature File
 
-  Scenario: check if user is valid login
-    Given the application is working
-    When the credentials are "valid"
-    Then take user to home page
+  @selenium
+  Scenario: Login scenario test for custom
+    Given navigate to custom page
+    When user logged in using username as "userA" and password as "password"
+    Then loginfail page should be displayed
 
-  Scenario: check if user is invalid login
-    Given the application is working
-    When the credentials are "invalid"
-    Then take user to login page
+  @selenium
+  Scenario: Login scenario test for custom
+    Given navigate to custom page
+    When user logged in using username as "admin" and password as "admin"
+    Then loginsuccess page should be displayed

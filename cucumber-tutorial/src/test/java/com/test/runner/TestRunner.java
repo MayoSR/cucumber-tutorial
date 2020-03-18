@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = {"src/main/resources"},
 		glue = {"com.sapient.steps"},
-		plugin = {"pretty", "html:target/cucumber-html-report"},
+		plugin = {"pretty", "html:target/cucumber-html-report","json:target/cucumber-json-report"},
 		monochrome = true
 )
 
